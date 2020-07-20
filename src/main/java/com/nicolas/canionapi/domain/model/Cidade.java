@@ -21,6 +21,9 @@ public class Cidade {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(nullable = false, name = "cod_ibge")
+	private Integer codigoIBGE;
+	
 	@Column(nullable = false)
 	private String nome;
 	

@@ -10,19 +10,16 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Localizacao {
-	
+public class Pais {
+
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(nullable = false)
-	private String latitudeStr; //13º18'57.82"S
-
-	@Column(nullable = false)
-	private String longitudeStr; //13º18'57.82"S
-	
+	private String nome;
 	
 }

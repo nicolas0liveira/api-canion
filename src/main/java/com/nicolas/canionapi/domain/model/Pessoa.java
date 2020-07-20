@@ -46,10 +46,20 @@ public class Pessoa {
     
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "pessoa_id",referencedColumnName = "id", nullable = false)
-	private List<Localizacao> enderecos = new ArrayList<>();
+    
+//	@ElementCollection
+//	@CollectionTable(
+//				name = "enderecos", 
+//				joinColumns = @JoinColumn(name = "pessoa_id", nullable = true))
+	private List<Endereco> enderecos = new ArrayList<>();
     
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "pessoa_id",referencedColumnName = "id", nullable = false)
+    
+//	@ElementCollection
+//	@CollectionTable(
+//				name = "telefones", 
+//				joinColumns = @JoinColumn(name = "pessoa_id", nullable = true))
    	private List<Telefone> telefones = new ArrayList<>();
     
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true /*, fetch = FetchType.EAGER*/)

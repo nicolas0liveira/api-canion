@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @Entity
-public class Localizacao {
+public class Proprietario {
 	
 	@EqualsAndHashCode.Include
 	@Id
@@ -19,10 +19,13 @@ public class Localizacao {
 	private Long id;
 	
 	@Column(nullable = false)
-	private String latitudeStr; //13º18'57.82"S
+	private String nome; 
 
 	@Column(nullable = false)
-	private String longitudeStr; //13º18'57.82"S
+	private String telefone;
 	
+	@Column(nullable = false)
+	private String email;
+
 	
 }
