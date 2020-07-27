@@ -18,8 +18,9 @@ public class Localizacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false)
-	private String latitudeStr; //13º18'57.82"S
+	//formato trabalhar com radiano ou decimal
+	@Column(nullable = false) 
+	private String latitudeStr; //13º18'57.82"S -> Radiano WS
 
 	@Column(nullable = false)
 	private String longitudeStr; //13º18'57.82"S

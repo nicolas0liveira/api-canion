@@ -37,7 +37,7 @@ public class Canion {
 	private String nomePrincipal;
 
 	@ElementCollection
-	@CollectionTable(name = "canions_outrosnomes")
+	@CollectionTable(name = "canion_nomes")
 	private List<String> outrosNomes; 
 	
 	@Enumerated(EnumType.STRING)
@@ -81,11 +81,11 @@ public class Canion {
 	//#################################
 
 	@OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "croqui_id", referencedColumnName = "id")
+    @JoinColumn(name = "croqui_id", referencedColumnName = "id")
 	private Croqui croqui;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "proprietario_id", referencedColumnName = "id")
+    @JoinColumn(name = "proprietario_id", referencedColumnName = "id")
 	private Proprietario proprietario;
 	
 	
